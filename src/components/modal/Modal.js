@@ -4,6 +4,7 @@ import { ModalBackdrop, ModalImg } from './Modal.styled';
 
 const modalRoot = document.querySelector('#modal-root');
 const Modal = ({ onClose, data }) => {
+  // eslint-disable-next-line react-hooks/exhaustive-deps
   const handleKeyDown = e => {
     if (e.code === 'Escape') {
       onClose();

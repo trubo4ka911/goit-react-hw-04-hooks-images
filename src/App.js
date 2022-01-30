@@ -12,6 +12,7 @@ const App = () => {
   const [images, setImages] = useState([]);
   const [page, setPage] = useState(1);
   const [total, setTotal] = useState(0);
+  // eslint-disable-next-line no-unused-vars
   const [error, setError] = useState(null);
   const [loading, setLoading] = useState(false);
   const [showModal, setShowModal] = useState(false);
