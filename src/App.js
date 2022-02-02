@@ -22,7 +22,7 @@ const App = () => {
     setLoading(true);
     getImages(imgName, page)
       .then(newImages => {
-        setImages(state => [...state, newImages.hits]);
+        setImages(state => [...state, ...newImages.hits]);
         setTotal(newImages.total);
         setLoading(false);
       })
@@ -37,7 +37,7 @@ const App = () => {
   }, [imgName, page, fetchImages]);
 
   const loadMore = () => {
-    setPage(prevState => prevState.page + 1);
+    setPage(prevState => prevState + 1);
   };
 
   const handleFormSubmit = imgName => {
